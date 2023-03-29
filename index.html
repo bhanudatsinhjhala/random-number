@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Min Max Number Generate</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <form onsubmit="handleSubmit(event)">
+          <label for="minVal"> Minimum Value: </label>
+          <input
+            type="number"
+            name="minVal"
+            placeholder="Add minimum number"
+            pattern="[0-9]/g"
+            onkeypress="validateForm(event)"
+            required
+          />
+          <label for="maxVal"> Maximum Value: </label>
+          <input
+            type="number"
+            name="maxVal"
+            placeholder="Add maximum number"
+            pattern="[0-9]/g"
+            onkeypress="validateForm(event)"
+            required
+          />
+          <input type="submit" name="Submit" />
+        </form>
+      </div>
+      <div class="generate-number">
+        <input
+          type="button"
+          value="Generate Number"
+          class="action-button action-generate"
+          onclick="generateNumber()"
+          disabled="true"
+        />
+        <input
+          type="button"
+          value="Reset"
+          class="action-button action-reset"
+          onclick="resetGame(true)"
+          disabled="true"
+        />
+        <input
+          type="button"
+          value="Complete Reset"
+          class="action-button action-reset-all"
+          onclick="resetGame(false)"
+          disabled="true"
+        />
+      </div>
+      <div class="display-number">
+        <h2 class="random-number"></h2>
+        <p class="list-number"></p>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

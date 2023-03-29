@@ -1,0 +1,36 @@
+.container {
+  margin: auto;
+  max-width: 450px;
+}
+.form-container {
+  max-width: 320px;
+}
+input {
+  margin-top: 1rem;
+}
+input[type="number"] {
+  padding: 0.5rem 0.25rem;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+input[type="button"]:disabled {
+  background-color: #00629b73;
+}
+input[type="submit"],
+input[type="button"] {
+  background-color: #00629b;
+  color: #ececec;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.action-generate,
+.action-reset,
+.action-reset-all {
+  padding: 0.5rem 0.25rem;
+}
+input[type="button"] {
+  margin-top: 2rem;
+}
